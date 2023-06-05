@@ -1,3 +1,7 @@
+let options = {
+    threshold: .8,
+}
+
 const defaultObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting){
@@ -15,7 +19,6 @@ const defaultObserver = new IntersectionObserver((entries) => {
                 if (column === "span 2"){
                     entry.target.classList.add("animate-right");
                 }
-                console.log(row, column, row === "span 2", column==="span 2");
             }
 
             entry.target.classList.add("show");
@@ -24,7 +27,7 @@ const defaultObserver = new IntersectionObserver((entries) => {
             //entry.target.classList.remove("show");
         }
     })
-})
+}, options)
 
 const animateLeftObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -35,7 +38,7 @@ const animateLeftObserver = new IntersectionObserver((entries) => {
             //entry.target.classList.remove("show");
         }
     })
-})
+}, options)
 
 function addProjectClasses(){
     if (window.matchMedia("(min-width: 1400px)").matches){
