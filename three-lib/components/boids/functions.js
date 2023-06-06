@@ -92,21 +92,29 @@ function avoidObstacles(boid){
 }
   // Find the center of mass of the other boids and adjust velocity slightly to
 // point towards the center of mass.
-function flyTowardsCenter(boid) {
-    const centeringFactor = 0.0007; // adjust velocity by this %
+function flyTowardsCenter(boid, otherBoids) {
+    const centeringFactor = 0.001; // adjust velocity by this %
   
     let centerX = 0;
     let centerY = 0;
     let centerZ = 0;
     let numNeighbors = 0;
+
+    let interprolateColor = null;
+    let originalColor = boid.material.color;
   
-    for (let otherBoid of boids) {
-      if (distance(boid, otherBoid) < visualRange) {
+    for (let otherBoid of otherBoids) {
         centerX += otherBoid.position.x;
         centerY += otherBoid.position.y;
         centerZ += otherBoid.position.z;
         numNeighbors += 1;
-      }
+
+        if (interprolateColor == null){
+          interprolateColor = otherBoid.material.color.clone()
+        }
+        else{
+          interprolateColor.lerp(otherBoid.material.color, .5);
+        }
     }
   
     if (numNeighbors) {
@@ -118,16 +126,18 @@ function flyTowardsCenter(boid) {
       boid.velocity.y += (centerY - boid.position.y) * centeringFactor;
       boid.velocity.z += (centerZ - boid.position.z) * centeringFactor;
     }
+
+    boid.material.color.lerp(interprolateColor, .01);
   }
 
 // Move away from other boids that are too close to avoid colliding
-function avoidOthers(boid) {
+function avoidOthers(boid, otherBoids) {
     const minDistance = 10; // The distance to stay away from other boids
-    const avoidFactor = 0.06; // Adjust velocity by this %
+    const avoidFactor = 0.07; // Adjust velocity by this %
     let moveX = 0;
     let moveY = 0;
     let moveZ = 0;
-    for (let otherBoid of boids) {
+    for (let otherBoid of otherBoids) {
       if (otherBoid !== boid) {
         if (distance(boid, otherBoid) < minDistance) {
           moveX += boid.position.x - otherBoid.position.x;
@@ -144,21 +154,19 @@ function avoidOthers(boid) {
 
 // Find the average velocity (speed and direction) of the other boids and
 // adjust velocity slightly to match.
-function matchVelocity(boid) {
-    const matchingFactor = 0.05; // Adjust by this % of average velocity
+function matchVelocity(boid, otherBoids) {
+    const matchingFactor = 0.06; // Adjust by this % of average velocity
   
     let avgDX = 0;
     let avgDY = 0;
     let avgDZ = 0;
     let numNeighbors = 0;
   
-    for (let otherBoid of boids) {
-      if (distance(boid, otherBoid) < visualRange) {
+    for (let otherBoid of otherBoids) {
         avgDX += otherBoid.velocity.x;
         avgDY += otherBoid.velocity.y;
         avgDZ += otherBoid.velocity.z;
         numNeighbors += 1;
-      }
     }
   
     if (numNeighbors) {
@@ -191,21 +199,29 @@ function limitSpeed(boid) {
       }
   }
 
-function update_boids(scene,input_boids){
+function update_boids(scene,boids){
     if (containment_box == null){
       containment_box = scene.children.filter(child => {return child.name == 'Containment Box'})[0];
       avoidance_box = scene.children.filter(child => {return child.name == 'Avoidance Box'})[0];
     }
-    boids = input_boids;
-    //avoidance_box = avoidance_box.getObjectByName('rect453')
-    containment_box.geometry.computeBoundingBox();
+
     for (let boid of boids) {
+      if (Math.random() < 0.5) {
         // Update the velocities according to each rule
-        flyTowardsCenter(boid);
-        avoidOthers(boid);
-        matchVelocity(boid);
+        let otherBoids = boids.filter(otherboid => distance(otherboid, boid) < visualRange)
+
+        flyTowardsCenter(boid, otherBoids);
+        avoidOthers(boid, otherBoids);
+        matchVelocity(boid, otherBoids);
         limitSpeed(boid);
         keepWithinBounds(boid);
+      }
+        boid.position.x = boid.position.x + boid.velocity.x;
+        boid.position.y = boid.position.y + boid.velocity.y;
+        boid.position.z = boid.position.z + boid.velocity.z;
+
+        boid.material.color.setHex(boid.material.color.getHex() + boid.colorUpdate)
+        
         //avoidObstacles(boid);
     }
     //console.log(boids[0].position.x,boids[0].velocity.x)

@@ -41,7 +41,7 @@ const animateLeftObserver = new IntersectionObserver((entries) => {
 }, options)
 
 function addProjectClasses(){
-    if (window.matchMedia("(min-width: 1400px)").matches){
+    if (window.innerWidth > 1400){
         document.querySelectorAll(".project-card:nth-child(n)").forEach((el) => {
             el.classList.add('animate-left')
         })
@@ -50,12 +50,12 @@ function addProjectClasses(){
             el.classList.add('animate-right')
         })
     }
-    else if (window.matchMedia("(max-width:1400px) and (min-width: 800px)").matches){
+    else if (window.innerWidth <= 1400 && window.innerWidth > 800){
         document.querySelectorAll(".project-card:nth-child(3n+1)").forEach((el) => {
             el.classList.add('animate-left')
         })
     }
-    else if (window.matchMedia("(max-width:800px) and (min-width: 500px)").matches){
+    else if (window.innerWidth <= 800 && window.innerWidth > 500){
         document.querySelectorAll(".project-card:nth-child(odd)").forEach((el) => {
             el.classList.add('animate-left')
         })
@@ -63,7 +63,7 @@ function addProjectClasses(){
             el.classList.add('animate-right')
         })
     }
-    else if (window.matchMedia("(max-width:500px)").matches){
+    else if (window.innerWidth <= 500){
         document.querySelectorAll(".project-card:nth-child(n)").forEach((el) => {
             el.classList.add('animate-down')
         })
@@ -75,9 +75,13 @@ window.onload = function() {
     addProjectClasses();
 }
 
-window.onresize = function() {
+window.resize = function() {
     addProjectClasses();
 }
+
+window.addEventListener('resize', () => {
+    
+})
 
 const hiddenElements = document.querySelectorAll(".hidden")
 const projectsAnimateLeft = document.querySelectorAll(".project-card:nth-child(3n+1)")

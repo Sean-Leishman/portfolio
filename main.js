@@ -1,7 +1,11 @@
-import * as THREE from 'three';
-import { init, animate } from './three-handler.js';
+import { World } from './three-lib/World.js';
 
-//import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
-//import HDR from "./assets/static/sepulchral_chapel_rotunda_2k.hdr";
+function main() {
+    const container = document.querySelector('#scene-container');
 
-init().then(() => animate());
+    const world = new World(container);
+
+    world.start();
+}
+
+main();
