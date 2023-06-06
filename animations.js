@@ -55,7 +55,7 @@ function addProjectClasses(){
             el.classList.add('animate-left')
         })
     }
-    else if (window.matchMedia("(max-width:800px)").matches){
+    else if (window.matchMedia("(max-width:800px) and (min-width: 500px)").matches){
         document.querySelectorAll(".project-card:nth-child(odd)").forEach((el) => {
             el.classList.add('animate-left')
         })
@@ -63,6 +63,12 @@ function addProjectClasses(){
             el.classList.add('animate-right')
         })
     }
+    else if (window.matchMedia("(max-width:500px)").matches){
+        document.querySelectorAll(".project-card:nth-child(n)").forEach((el) => {
+            el.classList.add('animate-down')
+        })
+    }
+
 }
 
 window.onload = function() {

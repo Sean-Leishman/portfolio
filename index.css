@@ -406,6 +406,10 @@ section.footer{
 .animate-right{
     transform: translateX(10vh);
 }
+
+.animate-down{
+    transform: translateY(-10vh);
+}
 .show{
     opacity:1;
     transform: translateY(0) translateX(0);
