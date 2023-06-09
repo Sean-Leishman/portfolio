@@ -6,7 +6,7 @@
   --purple: #8418ca;
   --dark-purple: #5c118d;
   --bg-gray: rgba(50, 52, 62, 0.3);
-  --bg-gray-nt: rgba(50, 52, 62, 0.5);
+  --bg-gray-nt: rgba(50, 52, 62);
 }
 
 body,
