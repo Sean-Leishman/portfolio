@@ -37,7 +37,7 @@ section {
   border-radius: 50px;
   margin: 0px 25px 50px 0px;
   padding: 0px 30px 30px 50px;
-  blur: 20px;
+  box-shadow: 10px 10px 20px #000, -10px 10px 20px #000;
 }
 .projects {
 }
