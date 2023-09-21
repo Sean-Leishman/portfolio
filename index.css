@@ -17,7 +17,7 @@ html {
   font-family: "Inconsolata", "NTR", sans-serif;
   color: var(--white);
   overflow-x: hidden;
-  font-size: calc(10px + 0.390625vw);
+  font-size: calc(10px + 0.367016vw);
 }
 * {
   margin: 0;
