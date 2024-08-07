@@ -88,3 +88,47 @@ const projectsAnimateLeft = document.querySelectorAll(".project-card:nth-child(3
 
 hiddenElements.forEach(element => defaultObserver.observe(element));
 projectsAnimateLeft.forEach(element => animateLeftObserver.observe(element))
+
+const projectArea = document.querySelector(".project-area");
+const nextButtons = document.querySelectorAll(".next-button");
+const prevButtons = document.querySelectorAll(".prev-button");
+
+const projectGrids = document.querySelectorAll(".project-grid-container");
+const [projectGridLeft, projectGridRight] = projectGrids;
+
+let currentButtonIndex = 0;
+
+prevButtons.forEach(prevButton => {
+    prevButton.addEventListener('click', (e) => {
+        projectArea.classList.remove("show-left");
+        projectArea.classList.add("show-right");
+
+        projectGridLeft.classList.remove("hidden-button");
+        projectGridLeft.classList.add("show-button");
+        projectGridRight.classList.remove("show-button");
+        projectGridRight.classList.add("hidden-button");
+
+        prevButton.classList.add("hidden-button");
+        prevButton.classList.remove("show-button");
+        currentButtonIndex--;
+        nextButtons[currentButtonIndex].classList.remove("hidden-button");
+        nextButtons[currentButtonIndex].classList.add("show-button");
+})});
+
+nextButtons.forEach(nextButton => {
+    nextButton.addEventListener('click', (e) => {
+        projectArea.classList.remove("show-right");
+        projectArea.classList.add("show-left");
+
+        projectGridLeft.classList.remove("show-button");
+        projectGridLeft.classList.add("hidden-button");
+        projectGridRight.classList.remove("hidden-button");
+        projectGridRight.classList.add("show-button");
+
+        nextButton.classList.add("hidden-button");
+        nextButton.classList.remove("show-button");
+        currentButtonIndex++;
+        prevButtons[currentButtonIndex].classList.remove("hidden-button");
+        prevButtons[currentButtonIndex].classList.add("show-button");
+})});
+
