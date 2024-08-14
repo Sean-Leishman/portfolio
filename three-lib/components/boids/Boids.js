@@ -40,9 +40,10 @@ class Boids {
     }
 
     generateGeometries(num) {
+        const geometry = new THREE.SphereGeometry(2 + 0.5 * 3, 4, 7);
         return Array.from(
             { length: num },
-            (_) => new THREE.SphereGeometry(2 + Math.random() * 3, 4, 7)
+            (_) => geometry.translate(Math.random() - 0.5, 0, 0)
         );
     }
 

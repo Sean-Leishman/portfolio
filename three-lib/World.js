@@ -34,11 +34,6 @@ class World{
         scene.add(boids.getGroup());
         loop.updateToUpdate(boids);
 
-        const loadingScreen = document.getElementById('loading-screen');
-        loadingScreen.classList.add('fade-out');
-        loadingScreen.addEventListener('transitionend', () => {
-            event.target.remove();
-        })
     }
 
     render() {

@@ -10,6 +10,16 @@ class Loop {
     this.mouseHandler = mouseHandler;
     this.toUpdate = [];
 
+  this.onLoaded = () => {
+        const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.classList.add('fade-out');
+            loadingScreen.addEventListener('transitionend', () => {
+                event.target.remove();
+            })
+    };
+
+    this.min_timeout = setTimeout(() => {this.onLoaded(); this.onLoaded=null}, 500);
+
     this.tickArgs = {
       mousePosition: this.mouseHandler.getPosition(),
       boxMesh: null,
@@ -51,6 +61,7 @@ class Loop {
   tick() {
     this.tickArgs.mousePosition = this.mouseHandler.getPosition();
     this.toUpdate.forEach((el) => el.tick(this.tickArgs));
+
   }
 }
 
