@@ -155,23 +155,28 @@ section {
 }
 
 .animate-intro {
-  animation: title_load 2s ease-out forwards;
+  animation-name: title_load;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+animation-delay:1s;
+--webkit-animation-delay:1s;
   opacity: 0;
 }
 
 .animate-intro:nth-child(1) {
-  animation-delay: 0.5s;
+  animation-delay: 1.5s;
 }
 
 .animate-intro:nth-child(2) {
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 .animate-intro:nth-child(3) {
   animation-delay: 1.5s;
 }
 .animate-intro:nth-child(4) {
-  animation-delay: 1.5s;
+  animation-delay: 2.5s;
 }
 
 @keyframes title_load {
@@ -193,6 +198,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+
 }
 
 .avatar-img {
@@ -565,7 +571,7 @@ section.footer {
   height: 100%;
   background-color: #000000;
   opacity: 1;
-  transition: 1s opacity;
+  transition: 0.5s opacity;
 }
 
 #loading-screen.fade-out {
