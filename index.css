@@ -523,7 +523,7 @@ a @media (max-width: 800px) {
 .project-tech-stack li {
   list-style-type: none;
   color: #ec7dff;
-  background-color: #191a29;
+  background-color: #311d39;
   border-width: 1px;
   border-radius: 10px;
   width: fit-content;
@@ -654,7 +654,7 @@ section.footer {
 }
 
 .blog-button {
-  color: var(--green);
+  color: var(--light-green);
   text-decoration: none;
   font-size: 1.1rem;
   background-color: #032b2a;
