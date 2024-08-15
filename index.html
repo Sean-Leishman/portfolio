@@ -67,7 +67,7 @@
                 <div class="section-header">
                     <h2 class="section-title hidden"><i>&lt; about me &gt;</i></h2>
                 </div>
-                <span class='page-body hidden'>I am currently undertaking a full-time Bachelor's of Science in
+                <span class='page-body hidden'><p>I am currently undertaking a full-time Bachelor's of Science in
                     <b>Artificial Intelligence & Computer Science</b> at the <span class="green-body">University of
                         Edinburgh</span>. <br> Here are
                     some technologies that I have been working with: <br>
@@ -91,7 +91,49 @@
                             <li>Svelte</li>
                         </div>
                     </ul>
+                    </p>
                 </span>
+            </section>
+            <section class='section experience'>
+                <div class='section-header'>
+                    <span class='section-title hidden'><i>&lt; experience &gt;</i></span>
+                </div>
+                <div class='two-column hidden'>
+                    <div class='year-row'>
+                        <div class='year'>
+                            <span>2024</span>
+                            <div class="timeline"></div>
+                        </div>
+                        <div class='year-events'>
+                            <span class='subtitle'>Squarepoint Capital:<br> Software Engineer Intern</span>
+                            <p class='details'>
+                            06/24-09/24 : London, UK
+                            </p>
+                            <p class='para'>
+                            Within Squarepoint Capital, I worked as a software engineering intern within the Data Infrastructure team. Generally, the team is responsible for the development, maintenance and monitoring of backend services, most prominently the timeseries database. My role was to develop a tool for users to have an end-to-end view of their query. This involved modifying the existing backend serivces written in C++ and modiying the C++ and Q clients. 
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class='year-row'>
+                        <div class='year'>
+                            <span>2023</span>
+                            <div class="timeline"></div>
+                        </div>
+                        <div class='year-events'>
+                            <span class='subtitle'>Coretech Security: 
+                            Software Engineer Intern</span>
+                            <p class='details'>
+                            06/23-08/23 : Cheltenhem, UK
+                            </p>
+
+                            <p class='para'>
+                            The internship at Coretech Security was within the Capability Development team. The team is responsible for the development of software in specific use cases for the company's clients. My role focussed on the investigation of telemetry tooling for the company's development needs and the development of an obfusaction tool for it's developed source code files. This was primarily developed for and written in C++. The process involves local variable renaming, function renaming and whitespace removal. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </section>
             <section class='section projects'>
                 <div class='section-header'>
@@ -108,6 +150,95 @@
                 </div>
                     <div class="project-grid-container">
                         <div class="project-grid">
+                            <article class="project-card hidden">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="assets/images/PairwiseTurnGPT.png">
+                                </div>
+                                <div class="project-body">
+                                    <div class="project-content">
+                                        <div class="project-title">
+                                            <span>PairwiseTurnGPT</span>
+                                            <div class="project-links">
+                                                <a class="link-github" target="_"
+                                                    href="https://github.com/Sean-Leishman/TurnipThorn">
+                                                    <iconify-icon icon="mdi:github"></iconify-icon>
+                                                </a>
+                                                <a class="link-website" target="_" href="https://stocktrend.co.uk">
+                                                    <iconify-icon icon="gg:website"></iconify-icon>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <p>
+                                        Research paper that proposes and evaluates a new turn-taking model for spoken dialogue with a particular focus on simulatenous dialogue acts. Publised for the 2024 SemDial conference.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="project-footer">
+                                        <ul class="project-tech-stack">
+                                            <li><span>Pytorch</span></li>
+                                            <li><span>AI</span></li>
+                                            <li><span>Research</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="project-card hidden">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="assets/images/Raytracer.png">
+                                </div>
+                                <div class="project-body">
+                                    <div class="project-content">
+                                        <div class="project-title">
+                                            Raytracer
+                                            <div class="project-links">
+                                                <a class="link-github" target="_"
+                                                    href="https://github.com/Sean-Leishman/raucous-wart">
+                                                    <iconify-icon icon="mdi:github"></iconify-icon>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <p>
+                                        Program written in C++ that generates images from a custom JSON file. It uses a Phong reflection model as well as a sampling-based light tracing model. Objects can be reflective, refractive and have rough textures.
+                                        </p>
+                                    </div>
+                                    <div class="project-footer">
+                                        <ul class="project-tech-stack">
+                                            <li><span>C++</span></li>
+                                            <li><span>Graphics</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="project-card hidden">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="assets/images/FlappyBirdRL.png">
+                                </div>
+                                <div class="project-body">
+                                    <div class="project-content">
+                                        <div class="project-title">
+                                            Flappy Bird RL
+                                            <div class="project-links">
+                                                <a class="link-github" target="_"
+                                                    href="https://github.com/Sean-Leishman/flap-rl">
+                                                    <iconify-icon icon="mdi:github"></iconify-icon>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <p>
+                                        A clone of the Flappy Bird game that is controlled by a reinforcement learning model. The model is trained using the NEAT algorithm which is a genetic algororithm designed to evolve neural network weights and topologies.
+                                        </p>
+                                    </div>
+                                    <div class="project-footer">
+                                        <ul class="project-tech-stack">
+                                            <li><span>JavaScript</span></li>
+                                            <li><span>RL</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
                             <article class="project-card hidden">
                                 <div class="project-image-container">
                                     <img class="project-image" src="assets/images/stocktrend/stocktrend.png">
@@ -143,6 +274,107 @@
                                             <li><span>Svelte</span></li>
                                             <li><span>AWS</span></li>
                                         </ul>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="project-card hidden">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="assets/images/next-stop.png">
+                                </div>
+                                <div class="project-body">
+                                        <div class="project-content">
+                                            <div class="project-title">
+                                                Singapore MRT Simulation 
+                                                <div class="project-links">
+                                                    <a class="link-github" target="_"
+                                                        href="https://github.com/Sean-Leishman/next-stop">
+                                                        <iconify-icon icon="mdi:github"></iconify-icon>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <p>
+                                            Simulation of the Singapore MRT system based on census and travel data. The simulation aimed to predict the number of passengers on individual trains and as such, find methods in which to alleviate congested periods.
+                                            </p>
+                                        </div>
+                                            
+                                        <div class="project-footer">
+                                            <ul class="project-tech-stack">
+                                                <li><span>Netlogo</span></li>
+                                                <li><span>Agent-based Modelling</span></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </article>
+                            <article class="project-card hidden">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="assets/images/chess/Untitled (1).png">
+                                </div>
+                                <div class="project-body">
+                                        <div class="project-content">
+                                            <div class="project-title">
+                                                Turtle Chess
+                                                <div class="project-links">
+                                                    <a class="link-github" target="_"
+                                                        href="https://github.com/Sean-Leishman/turtle-chess">
+                                                        <iconify-icon icon="mdi:github"></iconify-icon>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <p>
+                                                An implementation of chess in Python & Pygame. A custom chess engine is
+                                                also built in to allow the
+                                                user to play against an engine opponent.
+                                            </p>
+                                        </div>
+                                            
+                                        <div class="project-footer">
+                                            <a class="blog-button" href="https://www.blog.seanleishman.com/projects/chess/" target="_button">
+                                                Read My Post
+                                            </a>
+                                            <ul class="project-tech-stack">
+                                                <li><span>Python</span></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                <div class="next-button">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" style="&#10;    /* fill: white; */&#10;"><g><path d="M61.121,21.733c-1.171-1.172-3.071-1.172-4.242,0L30.733,47.879c-1.172,1.171-1.172,3.071,0,4.242l26.146,26.146   c0.586,0.586,1.354,0.879,2.122,0.879c0.768,0,1.536-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L37.097,50l24.024-24.025   C62.293,24.804,62.293,22.904,61.121,21.733z"/></g></svg>
+                </div>
+                <div class="prev-button hidden-button">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" style="&#10;    /* fill: white; */&#10;"><g><path d="M61.121,21.733c-1.171-1.172-3.071-1.172-4.242,0L30.733,47.879c-1.172,1.171-1.172,3.071,0,4.242l26.146,26.146   c0.586,0.586,1.354,0.879,2.122,0.879c0.768,0,1.536-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L37.097,50l24.024-24.025   C62.293,24.804,62.293,22.904,61.121,21.733z"/></g></svg>
+                </div>
+                    <div class="project-grid-container hidden-button">
+                        <div class="project-grid">
+                            <article class="project-card hidden">
+                                <div class="project-image-container">
+                                    <img class="project-image" src="assets/images/Portfolio.png">
+                                </div>
+                                <div class="project-body">
+                                        <div class="project-content">
+                                            <div class="project-title">
+                                                Portfolio Website
+                                                <div class="project-links">
+                                                    <a class="link-github" target="_"
+                                                        href="https://github.com/Sean-Leishman/portfolio">
+                                                        <iconify-icon icon="mdi:github"></iconify-icon>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <p>
+                                            Personal portfolio website that features some 3D design elements animations. The background image is a simulation of boids which are a simulation of flocking behaviour. The website was built using native JS and three.js.
+                                            </p>
+                                        </div>
+                                        <div class="project-footer">
+                                            <ul class="project-tech-stack">
+                                                <li><span>JavaScript</span></li>
+                                                <li><span>three.js</span></li>
+                                            </ul>
                                     </div>
                                 </div>
                             </article>
@@ -207,39 +439,6 @@
                                             <li><span>Arduino</span></li>
                                         </ul>
                                     </div>
-                                </div>
-                            </article>
-                            <article class="project-card hidden">
-                                <div class="project-image-container">
-                                    <img class="project-image" src="assets/images/chess/Untitled (1).png">
-                                </div>
-                                <div class="project-body">
-                                        <div class="project-content">
-                                            <div class="project-title">
-                                                Turtle Chess
-                                                <div class="project-links">
-                                                    <a class="link-github" target="_"
-                                                        href="https://github.com/Sean-Leishman/turtle-chess">
-                                                        <iconify-icon icon="mdi:github"></iconify-icon>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <p>
-                                                An implementation of chess in Python & Pygame. A custom chess engine is
-                                                also built in to allow the
-                                                user to play against an engine opponent.
-                                            </p>
-                                        </div>
-                                            
-                                        <div class="project-footer">
-                                            <a class="blog-button" href="https://www.blog.seanleishman.com/projects/chess/" target="_button">
-                                                Read My Post
-                                            </a>
-                                            <ul class="project-tech-stack">
-                                                <li><span>Python</span></li>
-                                            </ul>
-                                        </div>
                                 </div>
                             </article>
                             <article class="project-card hidden">
@@ -307,203 +506,25 @@
                                     </div>
                                 </div>
                             </article>
-
-                        </div>
-                    </div>
-                <div class="next-button">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" style="&#10;    /* fill: white; */&#10;"><g><path d="M61.121,21.733c-1.171-1.172-3.071-1.172-4.242,0L30.733,47.879c-1.172,1.171-1.172,3.071,0,4.242l26.146,26.146   c0.586,0.586,1.354,0.879,2.122,0.879c0.768,0,1.536-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L37.097,50l24.024-24.025   C62.293,24.804,62.293,22.904,61.121,21.733z"/></g></svg>
-                </div>
-                <div class="prev-button hidden-button">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" style="&#10;    /* fill: white; */&#10;"><g><path d="M61.121,21.733c-1.171-1.172-3.071-1.172-4.242,0L30.733,47.879c-1.172,1.171-1.172,3.071,0,4.242l26.146,26.146   c0.586,0.586,1.354,0.879,2.122,0.879c0.768,0,1.536-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L37.097,50l24.024-24.025   C62.293,24.804,62.293,22.904,61.121,21.733z"/></g></svg>
-                </div>
-                    <div class="project-grid-container hidden-button">
-                        <div class="project-grid">
                             <article class="project-card hidden">
                                 <div class="project-image-container">
-                                    <img class="project-image" src="assets/images/stocktrend/stocktrend.png">
-                                </div>
-                                <div class="project-body">
-                                    <div class="project-content">
-                                        <div class="project-title">
-                                            <span>StockTrend</span>
-                                            <div class="project-links">
-                                                <a class="link-github" target="_"
-                                                    href="https://github.com/Sean-Leishman/stocktrend">
-                                                    <iconify-icon icon="mdi:github"></iconify-icon>
-                                                </a>
-                                                <a class="link-website" target="_" href="https://stocktrend.co.uk">
-                                                    <iconify-icon icon="gg:website"></iconify-icon>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <p>
-                                            Full stack project that incorperates streamed data from the Twitter API and
-                                            analyses sentiment
-                                            in individual tweets in order to determine the overall sentiment in a
-                                            certain stock. 
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="project-footer">
-                                        <a class="blog-button" href="https://www.blog.seanleishman.com/projects/stocktrend/" target="_blank">
-                                            Read My Post
-                                        </a>
-                                        <ul class="project-tech-stack">
-                                            <li><span>Svelte</span></li>
-                                            <li><span>AWS</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="project-card hidden">
-                                <div class="project-image-container">
-                                    <img class="project-image" src="assets/images/horse/horse (2).png">
-                                </div>
-                                <div class="project-body">
-                                    <div class="project-content">
-                                        <div class="project-title">
-                                            Horse Race Prediction
-                                            <div class="project-links">
-                                                <a class="link-github" target="_"
-                                                    href="https://github.com/Sean-Leishman/stocktrend">
-                                                    <iconify-icon icon="mdi:github"></iconify-icon>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <p>
-                                            A model used to predict the odds of a horse winning a race mostly focussing
-                                            on representing
-                                            a horse's previous performance.
-                                        </p>
-                                    </div>
-                                    <div class="project-footer">
-                                        <ul class="project-tech-stack">
-                                            <li><span>Python</span></li>
-                                            <li><span>Tensorflow</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="project-card hidden">
-                                <div class="project-image-container">
-                                    <img class="project-image" src="assets/images/et-tu-uv/et-tu-uv.png">
-                                </div>
-                                <div class="project-body">
-                                    <div class="project-content">
-                                        <div class="project-title">
-                                            Et Tu UV
-                                            <div class="project-links">
-                                                <a class="link-github" target="_"
-                                                    href="https://github.com/Sean-Leishman/et-tu-uv">
-                                                    <iconify-icon icon="mdi:github"></iconify-icon>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <p>
-                                            IoT group project that uses a prototype device to collate personal UV data
-                                            in order
-                                            to generate insights and provide advice to end users.
-                                        </p>
-                                    </div>
-                                    <div class="project-footer">
-                                        <a class="blog-button" href="https://www.blog.seanleishman.com/projects/et-tu-uv/" target="_blank">
-                                            Read My Post
-                                        </a>
-                                        <ul class="project-tech-stack">
-                                            <li><span>Vue.js</span></li>
-                                            <li><span>Arduino</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="project-card hidden">
-                                <div class="project-image-container">
-                                    <img class="project-image" src="assets/images/chess/Untitled (1).png">
-                                </div>
-                                <div class="project-body">
-                                        <div class="project-content">
-                                            <div class="project-title">
-                                                Turtle Chess
-                                                <div class="project-links">
-                                                    <a class="link-github" target="_"
-                                                        href="https://github.com/Sean-Leishman/turtle-chess">
-                                                        <iconify-icon icon="mdi:github"></iconify-icon>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <p>
-                                                An implementation of chess in Python & Pygame. A custom chess engine is
-                                                also built in to allow the
-                                                user to play against an engine opponent.
-                                            </p>
-                                        </div>
-                                            
-                                        <div class="project-footer">
-                                            <a class="blog-button" href="https://www.blog.seanleishman.com/projects/chess/" target="_button">
-                                                Read My Post
-                                            </a>
-                                            <ul class="project-tech-stack">
-                                                <li><span>Python</span></li>
-                                            </ul>
-                                        </div>
-                                </div>
-                            </article>
-                            <article class="project-card hidden">
-                                <div class="project-image-container">
-                                    <img class="project-image" src="assets/images/fil/film-wizard.png">
-                                </div>
-                                <div class="project-body">
-                                        <div class="project-content">
-                                            <div class="project-title">
-                                                Film Wizard
-                                                <div class="project-links">
-                                                    <a class="link-github" target="_"
-                                                        href="https://github.com/Sean-Leishman/film-wizard">
-                                                        <iconify-icon icon="mdi:github"></iconify-icon>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <p>
-                                                Question & Answer chatbot developed as a university group project based
-                                                off of an extractive text
-                                                model in order to answer questions about movies.
-                                            </p>
-                                        </div>
-                                        <div class="project-footer">
-                                            <ul class="project-tech-stack">
-                                                <li><span>Python</span></li>
-                                                <li><span>Tensorflow</span></li>
-                                            </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="project-card hidden">
-                                <div class="project-image-container">
-                                    <img class="project-image" src="assets/images/path_finder/pf.png">
+                                    <img class="project-image" src="assets/images/othello.png">
                                 </div>
                                 <div class="project-body">
                                     <div class="project-innerbody">
                                         <div class="project-content">
                                             <div class="project-title">
-                                                Pathfinding Visualiser
+                                                Othello
                                                 <div class="project-links">
                                                     <a class="link-github" target="_"
-                                                        href="https://github.com/Sean-Leishman/path-finding-algorithm-visualiser">
+                                                        href="https://github.com/Sean-Leishman/othello">
                                                         <iconify-icon icon="mdi:github"></iconify-icon>
                                                     </a>
                                                 </div>
                                             </div>
 
                                             <p>
-                                                Web-based application that allows the user to generate random mazes and
-                                                find an optimal shortest path
-                                                with an animation depicting the A* search algorithm to find a random
-                                                target square.
+                                            Python clone of Othello. Implemented using Pygame and was first my first attempt at games-based programming from my school days!
                                             </p>
                                         </div>
 
@@ -524,6 +545,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" style="&#10;    /* fill: white; */&#10;"><g><path d="M61.121,21.733c-1.171-1.172-3.071-1.172-4.242,0L30.733,47.879c-1.172,1.171-1.172,3.071,0,4.242l26.146,26.146   c0.586,0.586,1.354,0.879,2.122,0.879c0.768,0,1.536-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L37.097,50l24.024-24.025   C62.293,24.804,62.293,22.904,61.121,21.733z"/></g></svg>
                 </div>
                 </div>
+            </section>
+            <section class='section education'>
+                <div class='section-header'>
+                    <span class='section-title hidden'><i>&lt; education &gt;</i></span>
+                </div>
+                <div class='two-column hidden'>
+                    <div class='year-row'>
+                        <div class='year'>
+                            <span>2024</span>
+                            <div class="timeline"></div>
+                        </div>
+                        <div class='year-events'>
+                            <span class='subtitle'>MInf Informatics Year 5</span>
+                            <p class='details'>
+                            09-24-05/25 : University of Edinburgh, UK
+                            </p>
+                            <p class='para'>
+                            </p>
+                        </div>
+                    </div>
+                    <div class='year-row'>
+                        <div class='year'>
+                            <span>2023</span>
+                            <div class="timeline"></div>
+                        </div>
+                        <div class='year-events'>
+                            <span class='subtitle'>MInf Informatics Year 4</span>
+                            <p class='details'>
+                            09-23-05/24 : University of Edinburgh, UK
+                            </p>
+                            <p class='para'>
+                            </p>
+                        </div>
+                    </div>
+                    <div class='year-row'>
+                        <div class='year'>
+                            <span>2022</span>
+                            <div class="timeline"></div>
+                        </div>
+                        <div class='year-events'>
+                            <span class='subtitle'>Exchange Year</span>
+                            <p class='details'>
+                            09/22-05/23 : Singapore Management University, Singapore
+                            </p>
+                            <p class='para'>
+                            </p>
+                        </div>
+                    </div>
+                    <div class='year-row'>
+                        <div class='year'>
+                            <span>2021</span>
+                            <div class="timeline"></div>
+                        </div>
+                        <div class='year-events'>
+                            <span class='subtitle'>MInf Informatics Year 2</span>
+                            <p class='details'>
+                            09/21-05/22 : University of Edinburgh, UK
+                            </p>
+                            <p class='para'>
+                            </p>
+                        </div>
+                    </div>
+                    <div class='year-row'>
+                        <div class='year'>
+                            <span>2020</span>
+                            <div class="timeline"></div>
+                        </div>
+                        <div class='year-events'>
+                            <span class='subtitle'>MInf Informatics Year 1</span>
+                            <p class='details'>
+                            09/20-05/21 : University of Edinburgh, UK
+                            </p>
+                            <p class='para'>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </div>
         <section class="footer">
