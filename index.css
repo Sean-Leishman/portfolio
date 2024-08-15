@@ -37,7 +37,7 @@ p {
   display: flex;
   flex-direction: column;
   width: 90%;
-  background-color: var(--bg-var(--gray));
+  background-color: var(--bg-var-gray);
   border-radius: 50px;
   margin: 0px 25px 50px 0px;
   padding: 0px 30px 30px 50px;
@@ -345,7 +345,7 @@ a @media (max-width: 800px) {
   border-width: 2px;
   border-style: solid;
   transition: transform 0.5s ease-in-out;
-  background-color: var(--bg-var(--gray));
+  background-color: var(--bg-var-gray);
   grid-template-rows: 175px 1fr;
   min-height:100%;
 }
