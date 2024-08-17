@@ -164,24 +164,24 @@ p {
   animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
-animation-delay:1s;
---webkit-animation-delay:1s;
+animation-delay:2s;
+--webkit-animation-delay:2s;
   opacity: 0;
 }
 
 .animate-intro:nth-child(1) {
-  animation-delay: 1.5s;
+  animation-delay: 2.5s;
 }
 
 .animate-intro:nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 .animate-intro:nth-child(3) {
-  animation-delay: 1.5s;
+  animation-delay: 3.5s;
 }
 .animate-intro:nth-child(4) {
-  animation-delay: 2.5s;
+  animation-delay: 3.5s;
 }
 
 @keyframes title_load {
